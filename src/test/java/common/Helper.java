@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.Set;
+
 public class Helper {
     private AppiumDriver driver;
     private final int DEAULT_TIMEOUT = 5;
@@ -77,4 +79,15 @@ public class Helper {
         driver.navigate().back();
     }
 
+    public WebElement findByXpath(String xpath){
+        return driver.findElementByXPath(xpath);
+    }
+
+    public Set<String> getContentHandlers(){
+        return  driver.getContextHandles();
+    }
+
+    public void content(String name){
+        driver.context(name);
+    }
 }

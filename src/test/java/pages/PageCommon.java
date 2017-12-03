@@ -54,4 +54,17 @@ public class PageCommon {
     public void goBack(){
         helper.goBack();
     }
+
+    public void switchToWebView(){
+//        Set<String> handlers = helper.getContentHandlers();
+//        for(String handler : handlers){
+//            System.out.println("==============="+handler);
+//        }
+        helper.content("WEBVIEW_net.oschina.app");
+    }
+
+    public void switchToNative(){
+        helper.content("NATIVE_APP");
+    }
+
 }

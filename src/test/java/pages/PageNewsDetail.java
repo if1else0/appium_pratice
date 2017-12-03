@@ -23,6 +23,14 @@ public class PageNewsDetail {
         return  helper.findById("net.oschina.app:id/ly_share_qq");
     }
 
+    public WebElement getFirstLine(){
+        return helper.findByXpath("/html/body/div/p[1]");
+    }
+
+    public String getFirstLineText(){
+        return helper.getText(getFirstLine());
+    }
+
     public void clickAddToFavorites(){
         helper.click(getAddToFavoritesBtn());
     }
